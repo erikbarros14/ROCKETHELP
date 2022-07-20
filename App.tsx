@@ -2,7 +2,7 @@
 
  import { useFonts , Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/roboto'
 
- import   {Home} from './src/screens/Home'
+ import   {Register} from './src/screens/Register'
 
  import {THEME} from './src/styles/theme'
  import {Loading}   from'./src/conponemts/Loading'
@@ -13,7 +13,7 @@
   return (
     <NativeBaseProvider theme={THEME} >
    
-      { fontsLoadedi?   <Home/> : <Loading /> }
+      { fontsLoadedi?   <Register/> : <Loading /> }
 
       </NativeBaseProvider>
   )
