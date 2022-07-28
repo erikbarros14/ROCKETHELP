@@ -1,5 +1,5 @@
 import { VStack,  } from 'native-base';
-import { Header } from '../conponemts/Header';
+import { Header } from '../components/Header';
 import { useRoute } from '@react-navigation/native'
   type  RoutesParams = {
     orderId : string

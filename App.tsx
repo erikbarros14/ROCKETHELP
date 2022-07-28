@@ -5,7 +5,7 @@
  import   {Router} from './src/routes/index'
 
  import {THEME} from './src/styles/theme'
- import {Loading}   from'./src/conponemts/Loading'
+ import {Loading}   from'./src/components/Loading'
 
  export default function App () {
    const [fontsLoadedi] =  useFonts(  {Roboto_700Bold, Roboto_400Regular})

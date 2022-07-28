@@ -2,9 +2,9 @@ import {  HStack, IconButton, VStack , useTheme, Heading, Text, FlatList, Center
 import Logo from '../assets/logo_secondary.svg'
 import { SignOut } from 'phosphor-react-native'
 import {useNavigation } from '@react-navigation/native'
-import { Filter } from '../conponemts/Filter'; 
-import { Orders , OrdersProps } from '../conponemts/Orders';
- import { Button } from '../conponemts/Button';
+import { Filter } from '../components/Filter'; 
+import { Orders , OrdersProps } from '../components/Orders';
+ import { Button } from '../components/Button';
  import { ChatTeardropText } from 'phosphor-react-native'
 
 import React, { useState } from 'react';
