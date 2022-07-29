@@ -14,7 +14,7 @@ export function Home() {
     const [  statusSelecter, setStatusSelecter] = useState <'open' | 'closed' > ('open')
     const [orders, setOrders] =useState <OrdersProps []> ([ 
       {
-        id: '123',
+        id: 'erik',
         patrimony: '1234567',
         when: '21/07/2022  13:47',
         status: 'open',
@@ -50,10 +50,10 @@ export function Home() {
         <VStack flex={1} px={6}  >
          <HStack w="full" mt={8} mb={4} justifyContent="space-between" alignItems="center " >
             <Heading color="gray.100">
-               Meus  chamados 
+              Solicitções
             </Heading>
          <Text color="gray.200" >
-           5
+           {Orders.length}
          </Text>
           </HStack>
 
