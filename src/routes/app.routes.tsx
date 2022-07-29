@@ -13,7 +13,7 @@ export function AppRoutes () {
         <Navigator screenOptions={{headerShown: false}} >
             <Screen name='home' component={Home} />
             <Screen  name='new' component={Register} />
-            <Screen name='deteios' component={Deteios} />
+            <Screen name='details' component={Deteios} />
 
            
         </Navigator>

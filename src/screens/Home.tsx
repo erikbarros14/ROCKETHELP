@@ -2,9 +2,9 @@ import {  HStack, IconButton, VStack , useTheme, Heading, Text, FlatList, Center
 import Logo from '../assets/logo_secondary.svg'
 import { SignOut } from 'phosphor-react-native'
 import {useNavigation } from '@react-navigation/native'
-import { Filter } from '../conponemts/Filter'; 
-import { Orders , OrdersProps } from '../conponemts/Orders';
- import { Button } from '../conponemts/Button';
+import { Filter } from '../components/Filter'; 
+import { Orders , OrdersProps } from '../components/Orders';
+ import { Button } from '../components/Button';
  import { ChatTeardropText } from 'phosphor-react-native'
 
 import React, { useState } from 'react';
@@ -14,7 +14,7 @@ export function Home() {
     const [  statusSelecter, setStatusSelecter] = useState <'open' | 'closed' > ('open')
     const [orders, setOrders] =useState <OrdersProps []> ([ 
       {
-        id: '123',
+        id: 'erik',
         patrimony: '1234567',
         when: '21/07/2022  13:47',
         status: 'open',
@@ -50,10 +50,10 @@ export function Home() {
         <VStack flex={1} px={6}  >
          <HStack w="full" mt={8} mb={4} justifyContent="space-between" alignItems="center " >
             <Heading color="gray.100">
-               Meus  chamados 
+              Solicitções
             </Heading>
          <Text color="gray.200" >
-           5
+           {Orders.length}
          </Text>
           </HStack>
 

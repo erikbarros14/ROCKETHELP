@@ -2,10 +2,10 @@
 import { useState } from 'react'
 import  {  VStack , Heading, Icon, useTheme } from  'native-base'
 import Logo  from '../assets/logo_primary.svg'
-import { Input } from '../conponemts/Input'
+import { Input } from '../components/Input'
 import  { Envelope , Key }  from 'phosphor-react-native'
 import { Colors } from 'react-native/Libraries/NewAppScreen'
-import { Button } from '../conponemts/Button'
+import { Button } from '../components/Button'
 
 export  function Singnin() {
 
