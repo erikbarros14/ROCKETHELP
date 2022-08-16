@@ -1,5 +1,7 @@
 
 import { useState } from 'react'
+import auth from '@react-native-firebase/auth'
+import { Alert } from 'react-native'
 import  {  VStack , Heading, Icon, useTheme } from  'native-base'
 import Logo  from '../assets/logo_primary.svg'
 import { Input } from '../components/Input'
@@ -9,12 +11,25 @@ import { Button } from '../components/Button'
 
 export  function Singnin() {
 
-const [name , setName] = useState('')
+const [isloading, setIsloading] = useState (false)
+const [email , setEmail] = useState('')
 const [senha , setSenha] = useState('')
 
  const {colors} = useTheme()
  function handleSignin () {
-  console.log(name , senha)
+ if(!email || !senha) {
+  return Alert.alert( "opss !!" , "informe seu emal e senha !!" )
+ }
+
+ setIsloading(true)
+   
+    auth() . signInWithEmailAndPassword(email , senha)
+    .catch((error) => {
+      console.log(error)
+      setIsloading(false)
+    })
+    
+   
  }
 
 return (
@@ -29,7 +44,7 @@ return (
         mb={4}
        placeholder="E-mail" 
          InputLeftElement={ <Icon as = { <Envelope color={colors.gray [300] }   /> } ml={3} /> }
-          onChangeText= {setName}
+          onChangeText= {setEmail}
            />
       <Input 
       mb={8 }
@@ -39,7 +54,11 @@ return (
         onChangeText = {setSenha}
       />
 
-      <Button title="Entrar" w='full'  onPress={handleSignin} />
+      <Button 
+      title="Entrar" w='full' 
+       onPress={handleSignin}
+       isLoading={isloading}
+       />
 
    </VStack>
 )
